@@ -5,10 +5,10 @@ export default function ContactMe() {
         <p className="sub--title">Get In Touch</p>
         <h2>Contact Me</h2>
         <p className="text-lg">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, odit.
+          Contanct me for any type of services like React , React-Native
         </p>
       </div>
-      <form className="contact--form--container">
+      <form className="contact--form--container" action="https://getform.io/f/8453b25a-f199-4352-9de5-e7cd3d1ab21f" method="post">
         <div className="container">
           <label htmlFor="first-name" className="contact--label">
             <span className="text-md">First Name</span>
@@ -55,9 +55,9 @@ export default function ContactMe() {
           <span className="text-md">Choose a topic</span>
           <select id="choose-topic" className="contact--input text-md">
             <option>Select One...</option>
-            <option>Item 1</option>
-            <option>Item 2</option>
-            <option>Item 3</option>
+            <option>React</option>
+            <option>React-native</option>
+            <option>Full Stack Developer</option>
           </select>
         </label>
         <label htmlFor="message" className="contact--label">

@@ -1,12 +1,25 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleTheme } from "../../redux/action";
 
 function Navbar() {
+
+  const dispatch = useDispatch();
+  const isDarkMode = useSelector((state) => state.isDarkMode);
+
   const [navActive, setNavActive] = useState(false);
+  
+
+  const handleToggle = () => {
+    dispatch(toggleTheme());
+  };
 
   const toggleNav = () => {
     setNavActive(!navActive);
   };
+
+  console.log('mode',isDarkMode);
 
   const closeMenu = () => {
     setNavActive(false);
@@ -103,6 +116,24 @@ function Navbar() {
               Testimonials
             </Link>
           </li>
+          {/* <li>
+            <div>
+              <input
+                type="checkbox"
+                className="checkbox"
+                id="checkbox"
+                checked={isDarkMode}
+                onChange={handleToggle}
+              />
+              <label htmlFor="checkbox" className="checkbox-label">
+                <i className={`fas ${isDarkMode ? "fa-sun" : "fa-moon"}`}></i>
+                <i className={`fas ${isDarkMode ? "fa-moon" : "fa-sun"}`}></i>
+                <span
+                  className={`ball ${isDarkMode ? "dark" : "light"}`}
+                ></span>
+              </label>
+            </div>
+          </li> */}
         </ul>
       </div>
       <Link
