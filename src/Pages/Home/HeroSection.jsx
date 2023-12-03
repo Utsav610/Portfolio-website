@@ -1,4 +1,11 @@
 export default function HeroSection() {
+
+  const handleButtonClick = () => {
+    
+    const pdfUrl = './img/utsav_jogani.pdf';
+    window.open(pdfUrl, '_blank');
+  };
+
   return (
     <section id="heroSection" className="hero--section">
       <div className="hero--section--content--box">
@@ -16,7 +23,7 @@ export default function HeroSection() {
             <br /> Let's build something extraordinary together! 🌟
           </p>
         </div>
-        <button className="btn btn-primary">Get In Touch</button>
+        <button className="btn btn-primary" onClick={handleButtonClick}>Download Resume</button>
       </div>
       <div className="hero--section--img">
         <img src="./img/upgrade.png" alt="Hero Section" />
